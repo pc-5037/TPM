@@ -16,7 +16,8 @@ class RegisterData extends CI_Model{
         $this->db->select('ruid');
         $this->db->from('registerdata');
         $query = $this->db->get();
-        $result = $query->last_row();       
-        return $result;
+        $result = $query->last_row();
+        $ruid = $result->ruid;
+        return $ruid;
     }
 }
