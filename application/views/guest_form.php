@@ -22,10 +22,6 @@ $this->load->view('/templates/navreg');
 <CENTER><h3>Data inserted successfully</h3></CENTER><br>
 
 <?php } ?>
-<?php if (isset($uid)) { echo $uid->ruid;}
- else {
-        echo "none";
-}?>
 
 <fieldset>
     <legend>Register Form</legend><br/>
