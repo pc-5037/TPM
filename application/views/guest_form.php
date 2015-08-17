@@ -30,11 +30,11 @@ $this->load->view('/templates/navreg');
         <p><label id="hide">UID :</label>
             <input type="text" id="hide" name="uid" value="<?php echo $uid; ?>" readonly="readonly"><br></p>
         <p><label>Name :</label>
-            <input type="text" name="gname" placeholder="5-10 characters"><br></p>
+            <input type="text" name="gname" placeholder="5-10 characters" required><br></p>
         <p><label>Email :</label>
-            <input type="email" name="gmail" placeholder="example@mail.com"><br></p>
+            <input type="email" name="gmail" placeholder="example@mail.com" required><br></p>
         <p><label>Mobile No. :</label>
-            <input type="tel" name="gtel" placeholder="10 digits"><br></p>
+            <input type="tel" name="gtel" placeholder="10 digits" required><br></p>
         <p><input class="formbutton" type="submit" id="submit" name="dsubmit" value="Update"></p>
 </form>
 </fieldset>
