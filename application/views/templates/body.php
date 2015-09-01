@@ -3,40 +3,17 @@
 	    <article>
 				
 			
-			<h2>Introduction to anatine</h2>
+			<h2>Wireless sensor-based application for managing Theme Park</h2>
 			<div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+                        <p>Wireless sensor-based application for managing theme park is a web application 
+                            for accumulating and displaying data that were collected from the guests via 
+                            environmental sensors e.g. temperature sensor, accelerometer sensor, pulse sensor
+                            , and RFID technology with the help of Arduino microcontroller. To provide a 
+                            report on visiting statistics and a unique selling-point, sensors, Wi-Fi module 
+                            and RFID reader will be attached to the arduino in order to collect data from 
+                            theme park's guest, then sent them to web server, which the data will be handled 
+                            and displayed.</p>
 
-            <p>Welcome to anatine, a free premium valid CSS3 &amp; HTML5 web template from <a href="http://zypopwebtemplates.com/" title="ZyPOP">ZyPOP</a>. This responsive template is completely <strong>free</strong> to use permitting a link remains back to  <a href="http://zypopwebtemplates.com/" title="ZyPOP">http://zypopwebtemplates.com/</a>.</p>
-
-<p>Should you wish to use this template unbranded you can buy a template license from our website for 8.00 GBP, this will allow you remove all branding related to our site, for more information about this see below.</p>	
-            
-            <p>This template has been tested in:</p>
-
-
-            <ul class="styledlist">
-                <li>Firefox</li>
-                <li>Opera</li>
-                <li>IE</li>
- 		<li>Safari</li>
-                <li>Chrome</li>
-            </ul>
-            <ul class="styledlist">
-                <li>Firefox</li>
-                <li>Opera</li>
-                <li>IE</li>
- 		<li>Safari</li>
-                <li>Chrome</li>
-            </ul>
-            <ul class="styledlist">
-                <li>Firefox</li>
-                <li>Opera</li>
-                <li>IE</li>
- 		<li>Safari</li>
-                <li>Chrome</li>
-            </ul>
-
-		<a href="#" class="button">Read more</a>
-		<a href="#" class="button button-reversed">Comments</a>
 
 
 		

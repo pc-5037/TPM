@@ -21,15 +21,18 @@ class Attraction extends CI_Model{
     
     public function insertAttraction($data) {
         $this->db->insert('attraction', $data);
+//        return getAttraction($data->aid);
     }
     
     public function editAttraction($id,$data){
         $this->db->where('aid', $id);
         $this->db->update('attraction', $data);
+//        return getAttraction($id);
     }
     
     public function deleteAttraction($id){
         $this->db->where('aid', $id);
         $this->db->delete('attraction');
+//        return getAttraction($id);
     }
 }

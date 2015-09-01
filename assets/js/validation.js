@@ -23,7 +23,7 @@ function validateGuest() {
         alert("Name must be 5-30 characters in length");
         return false;
     }if (tel.length<10){
-        alert("Telephone number must be 10 digits");
+        alert("Mobile number must be 10 digits");
         return false;
     }
     return true;

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class guests extends CI_Controller{
+class Guests extends CI_Controller{
     function __construct() {
         parent::__construct();
         $this->load->model('guest');
@@ -17,8 +17,8 @@ class guests extends CI_Controller{
             $data = array(
                 'guid' => $this->input->post('uid'),
                 'gname' => $this->input->post('gname'),
-                'gmail' => $this->input->post('gemail'),
-                'gtel' => $this->input->post('gmobile')
+                'gmail' => $this->input->post('gmail'),
+                'gtel' => $this->input->post('gtel')
             );
             //Transfering data to Model
             $this->guest->insertGuest($data);

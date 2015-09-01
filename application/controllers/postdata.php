@@ -1,6 +1,6 @@
 <?php
 
-class postdata extends CI_Controller{
+class Postdata extends CI_Controller{
     function __construct() {
         parent::__construct();
         $this->load->model('RegisterData');

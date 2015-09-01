@@ -22,16 +22,19 @@ class Guest extends CI_Model{
     
     public function insertGuest($data) {
         $this->db->insert('guest', $data);
+//        return getGuest($data->gid);
     }
     
     public function editGuest($id,$data){
         $this->db->where('gid', $id);
         $this->db->update('guest', $data);
+//        return getGuest($id);
     }
     
     public function deleteGuest($id){
         $this->db->where('gid', $id);
         $this->db->delete('guest');
+//        return getGuest($id);
     }
     
     public function changeStatus($uid,$status){

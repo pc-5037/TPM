@@ -25,12 +25,11 @@ $this->load->view('/templates/navreg');
 
 <fieldset>
     <legend>Register Form</legend><br/>
-<form>
     <form name="myForm" onsubmit="return validateGuest()" method="post" action="<?php echo base_url() . "index.php/guests/add"?>">
         <p><label id="hide">UID :</label>
             <input type="text" id="hide" name="uid" value="<?php echo $uid; ?>" readonly="readonly"><br></p>
         <p><label>Name :</label>
-            <input type="text" name="gname" placeholder="5-10 characters" required><br></p>
+            <input type="text" name="gname" placeholder="5-30 characters" required><br></p>
         <p><label>Email :</label>
             <input type="email" name="gmail" placeholder="example@mail.com" required><br></p>
         <p><label>Mobile No. :</label>
