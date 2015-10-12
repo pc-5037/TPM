@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Guests.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/guest_edit_form.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/Guest.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/assets/js/confirmation.js</file>
-            <file>file:/C:/xampp/htdocs/TPM/assets/js/validation.js</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/guest_form.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

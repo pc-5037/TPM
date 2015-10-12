@@ -38,4 +38,4 @@ $this->load->view('/templates/navadda');
 		</section>
 <?php 
 $this->load->view('/templates/footer');
-?>
+

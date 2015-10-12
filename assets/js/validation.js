@@ -19,11 +19,12 @@ function validateAttraction() {
 function validateGuest() {
     var name = document.forms["myForm"]["gname"].value;
     var tel = document.forms["myForm"]["gtel"].value;
+    var phoneno = /^\d{10}$/; 
     if (name.length<5 || name.length>30) {
         alert("Name must be 5-30 characters in length");
         return false;
-    }if (tel.length<10){
-        alert("Mobile number must be 10 digits");
+    }if (!tel.match(phoneno)){
+        alert("Inavalid mobile no.");
         return false;
     }
     return true;

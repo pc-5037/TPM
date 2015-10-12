@@ -22,7 +22,7 @@ class Guest extends CI_Model{
     
     public function insertGuest($data) {
         $this->db->insert('guest', $data);
-//        return getGuest($data->gid);
+//        return ($this->db->affected_rows() != 1) ? false : true;
     }
     
     public function editGuest($id,$data){

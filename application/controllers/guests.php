@@ -15,7 +15,7 @@ class Guests extends CI_Controller{
     
     function add() {   
             $data = array(
-                'guid' => $this->input->post('uid'),
+                'guid' => $this->input->post('guid'),
                 'gname' => $this->input->post('gname'),
                 'gmail' => $this->input->post('gmail'),
                 'gtel' => $this->input->post('gtel')

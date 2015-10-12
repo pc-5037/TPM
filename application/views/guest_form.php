@@ -22,12 +22,17 @@ $this->load->view('/templates/navreg');
 <CENTER><h3>Data inserted successfully</h3></CENTER><br>
 
 <?php } ?>
-
+<?php if (isset($uid)){
+    $id = $uid; 
+}else{
+    $id= NULL;
+}
+?>
 <fieldset>
     <legend>Register Form</legend><br/>
     <form name="myForm" onsubmit="return validateGuest()" method="post" action="<?php echo base_url() . "index.php/guests/add"?>">
         <p><label id="hide">UID :</label>
-            <input type="text" id="hide" name="uid" value="<?php echo $uid; ?>" readonly="readonly"><br></p>
+            <input type="text" id="hide" name="guid" value="<?php echo $id; ?>" readonly="readonly"><br></p>
         <p><label>Name :</label>
             <input type="text" name="gname" placeholder="5-30 characters" required><br></p>
         <p><label>Email :</label>
@@ -35,7 +40,7 @@ $this->load->view('/templates/navreg');
         <p><label>Mobile No. :</label>
             <input type="tel" name="gtel" placeholder="10 digits" required><br></p>
         <p><input class="formbutton" type="submit" id="submit" name="dsubmit" value="Update"></p>
-</form>
+    </form>
 </fieldset>
 
 		
@@ -44,5 +49,5 @@ $this->load->view('/templates/navreg');
 		</section>
 <?php 
 $this->load->view('/templates/footer');
-?>
+
 
