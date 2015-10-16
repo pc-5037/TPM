@@ -15,8 +15,6 @@
                             and displayed.</p>
 
 
-
-		
 		</article>
 		<div class="clear"></div>
 		</section>

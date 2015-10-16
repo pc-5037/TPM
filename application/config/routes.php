@@ -53,3 +53,4 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['adduid/(:any)'] = 'postdata/postuid/$1';
+$route['gate/(:num)/(:any)'] = 'postdata/addstat/$1/$2';
