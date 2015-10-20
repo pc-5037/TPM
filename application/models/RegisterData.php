@@ -9,7 +9,7 @@ class RegisterData extends CI_Model{
     public function insertUid($uid){
         $data = array('ruid' => $uid);
         $this->db->insert('registerdata',$data);
-        return getLastInserted();
+//        return getLastInserted();
     }
     
     public function getLastInserted() {
