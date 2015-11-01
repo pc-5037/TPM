@@ -11,15 +11,22 @@ class Postdata extends CI_Controller{
         $this->RegisterData->insertUid($id);
     }
     function post_tm_stat($id,$location) {
-        $date = date('Y-m-d'); 
-        $time = date('H:i:s');
+        $date = date('Y-m-d H:i:s');
         $data = array(
                 'uid' => $id,
                 'location' => $location,
-                'date' => $date,
-                'time' => $time
+                'date' => $date
             );
         $this->activitystat->insertThemeParkStat($data);       
+    }
+        function post_at_stat($id,$location) {
+        $date = date('Y-m-d H:i:s');
+        $data = array(
+                'uid' => $id,
+                'location' => $location,
+                'date' => $date
+            );
+        $this->activitystat->insertAttractionStat($data);       
     }
     
 }
