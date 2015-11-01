@@ -5,6 +5,7 @@ class test extends CI_Controller{
         parent::__construct();
         $this->load->library('unit_test');
         $this->load->model('guest');
+        $this->load->model('activitystat');
     }
     
     public function testinsertGuests(){
@@ -33,5 +34,28 @@ class test extends CI_Controller{
             'status'=>'0');
         $this->unit->run($this->guest->getGuest('4'),$exp_re,'getGuest');
         $this->load->view('test_view');
+    }
+    
+    public function testinserttm() {
+        $date = date('Y-m-d'); 
+        $time = date('H:i:s');
+        $data['uid']='NN3M56OU';
+        $data['location']='en';
+        $data['date']=$date;
+        $data['time']=$time;
+        $this->activitystat->insertThemeParkStat($data);
+        print_r($data);
+        $result['result'] = $this->activitystat->getLastTm();
+        print_r($result);
+//        $this->load->view('test_view_chart',$data,$result);
+    }
+    public function testinsertat() {
+        
+    }
+    public function testgettm() {
+        
+    }
+    public function testgetat() {
+        
     }
 }

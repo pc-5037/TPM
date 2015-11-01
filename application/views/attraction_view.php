@@ -29,6 +29,7 @@ $this->load->view('/templates/navviat');
                 <th>Height Limit</th>
                 <th>Edit</th>
                 <th>Delete</th>
+                <th>Activity</th>
             </tr>
         <?php foreach ($attraction_list as $attraction):?>
             <tr>
@@ -53,6 +54,11 @@ $this->load->view('/templates/navviat');
                     <a onclick="return confirmDelete()" class="button button-reversed" href="<?php echo base_url() . "index.php/attractions/delete/" . $attraction->aid; ?>">
                 Delete</a>
 <!--                    anchor to delete ctrl -->
+                </td>
+                <td>
+               <a class="button" href="<?php echo base_url() . "index.php/activity/at_chart/" . $attraction->aid; ?>">
+                Activity</a>
+<!--                    anchor to edit ctrl-->
                 </td>
                 </tr>
         <?php endforeach; ?>

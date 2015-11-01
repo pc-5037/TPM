@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/StatData.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Charts.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Test.php</file>
             <file>file:/C:/xampp/htdocs/TPM/application/controllers/Activity.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/DropdownList.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/config/routes.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/test_view_chart.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/activity_view.php</file>
             <file>file:/C:/xampp/htdocs/TPM/application/models/ActivityStat.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/gchart_examples.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Postdata.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/RegisterData.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/activity_dropdown.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/test_view.php</file>
         </group>
     </open-files>
 </project-private>

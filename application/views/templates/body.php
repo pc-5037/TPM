@@ -14,7 +14,6 @@
                             theme park's guest, then sent them to web server, which the data will be handled 
                             and displayed.</p>
 
-
 		</article>
 		<div class="clear"></div>
 		</section>
