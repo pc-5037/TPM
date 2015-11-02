@@ -4,20 +4,20 @@ class Activity extends CI_Controller{
     function __construct() {
         parent::__construct();
         $this->load->model('ActivityStat');
+        $this->load->model('Attraction');
     }
     
     function tm_chart(){
         $data['activitystat'] = $this->ActivityStat->getThemeParkStat(); 
-//        print_r($data);
-        $start_date = new DateTime('now');
-        $end_date = date_sub($start_date,date_interval_create_from_date_string("7 days"));
-        $end_date = date_format($start_date,"Y-m-d");
-//        print_r($end_date);
-        $this->load->view('activity_view');
+        $data['name'] = 'Theme park Activity';
+//        print_r($data);       
+        $this->load->view('activity_view',$data);
     }
     function at_chart($id) {
-        $data['atact'] = $this->ActivityStat->getAttractionStat($id); 
-        print_r($data);
-//        $this->load->view('activity_view',$data,$array);
+        $data['activitystat'] = $this->ActivityStat->getAttractionStat($id); 
+        $result = $this->Attraction->getAttraction($id);
+        $data['name'] = $result[0]->aname." Activity";
+//        print_r($result[0]->aname);
+        $this->load->view('activity_view',$data);
     }
 }

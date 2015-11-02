@@ -17,6 +17,7 @@
             <li><a href="<?php echo site_url('guests/show') ?>">View Guest Info</a></li>
             <li><a href="<?php echo site_url('attractions/add_form') ?>">Add Attraction</a></li>
             <li class="selected-item"><a href="<?php echo site_url('attractions/show') ?>">View Attraction</a></li>
+            <li><a href="<?php echo site_url('activity/tm_chart') ?>">Activity</a></li>
         </ul>
 	</nav>
 

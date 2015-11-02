@@ -22,7 +22,7 @@ class ActivityStat extends CI_Model{
         $this->db->group_by('date');
         $this->db->from('themepark_attendance');
         $query = $this->db->get();
-        $result = $query->result();
+        $result = $query->result_array();
         return $result;
     }
     public function getAttractionStat($id){
@@ -40,7 +40,7 @@ class ActivityStat extends CI_Model{
         $this->db->group_by('date');
         $this->db->from('attractions_attendance');
         $query = $this->db->get();
-        $result = $query->result();
+        $result = $query->result_array();
         return $result;
     }
     public function insertThemeParkStat($data){

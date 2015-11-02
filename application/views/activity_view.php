@@ -12,37 +12,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 <?php 
-$this->load->view('/templates/navadda');
+$this->load->view('/templates/navact');
 ?>
 <section id="content" class="column-right">
+    <?php
+     for ($i = 0; $i < sizeof($activitystat); $i++) :
+     $date[] = $activitystat[$i]['date'];
+     $pad[] = "'".$date[$i]."'";
+     $guest[]=$activitystat[$i]['total_visit'];
+    endfor;
+//    echo print_r($activitystat);
+//    echo print_r($guest);
+    ?>
         <script> $(function () { 
     $('#container').highcharts({
         chart: {
             type: 'line'
         },
         title: {
-            text: 'Activities'
+            text: '<?php echo $name; ?>'
         },
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']//put dates here
-        },
+            categories : [<?php echo join($pad,',') ?>]
+         },
         yAxis: {
             title: {
                 text: 'Number of visitors'
             }
         },
         series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
+            name: '# of visitors',
+            data:  [<?php echo join($guest,','); ?>]
         }]
     });
 });
         </script>        		
 	<article>
-	<h1>Activity</h1><hr/><br/>		
+	<h1>Activity</h1><hr/><br/>	
+        <?php if (empty($activitystat)) { ?>
+        <CENTER><h3 style="color:red;">The activity record is empty!</h3></CENTER><br>
+        <?php } ?>
                 <div id="container" style="width:100%; height:400px;"></div>
 		</article>
 		<div class="clear"></div>
