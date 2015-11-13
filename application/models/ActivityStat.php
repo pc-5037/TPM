@@ -10,13 +10,14 @@ class ActivityStat extends CI_Model{
     public function getThemeParkStat(){
         $start_date = date('Y-m-d H:i:s'); 
         $date = new DateTime('now');
-        $end_date = date_sub($date,date_interval_create_from_date_string("7 days"));
+        $en = 'en';
+        $end_date = date_sub($date,date_interval_create_from_date_string("6 days"));
         $end_date = date_format($date,"Y-m-d");
 //        $qr = 'SELECT DATE(date) AS dates, SUM(quantity) AS total_visit
 //               GROUP BY dates';
         $this->db->select('DATE(date) AS date, SUM(quantity) AS total_visit');
-        $this->db->where('date <=', 'DATE_SUB(NOW(),INTERVAL 7 DAYS )');
-        $this->db->where('location','en');
+//        $this->db->where('date <=', 'DATE_SUB(NOW(),INTERVAL 7 DAYS )');
+        $this->db->where('location',$en);
         $this->db->where('date <=', $start_date);
         $this->db->where('date >=', $end_date);
         $this->db->group_by('date');
@@ -28,12 +29,12 @@ class ActivityStat extends CI_Model{
     public function getAttractionStat($id){
        $start_date = date('Y-m-d H:i:s'); 
         $date = new DateTime('now');
-        $end_date = date_sub($date,date_interval_create_from_date_string("7 days"));
+        $end_date = date_sub($date,date_interval_create_from_date_string("6 days"));
         $end_date = date_format($date,"Y-m-d");
 //        $qr = 'SELECT DATE(date) AS dates, SUM(quantity) AS total_visit
 //               GROUP BY dates';
         $this->db->select('DATE(date) AS date, SUM(quantity) AS total_visit');
-        $this->db->where('date <=', 'DATE_SUB(NOW(),INTERVAL 7 DAYS )');
+//        $this->db->where('date <=', 'DATE_SUB(NOW(),INTERVAL 6 DAYS )');
         $this->db->where('location',$id);
         $this->db->where('date <=', $start_date);
         $this->db->where('date >=', $end_date);

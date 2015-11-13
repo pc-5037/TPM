@@ -5,8 +5,8 @@ function validateAttraction() {
     if (name.length<5 || name.length>30) {
         alert("Name must be 5-30 characters in length");
         return false;
-    }if(des.length<5 || des.length> 60) {
-        alert("Description must be 5-60 characters in length");
+    }if(des.length<5 || des.length> 250) {
+        alert("Description must be 5-250 characters in length");
         return false;
     }if (height.length<3){
         alert("Height limit must not be more than 3 digits");
