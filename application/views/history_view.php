@@ -27,16 +27,15 @@
 </head>
 
 <body>
-            <?php 
+<?php 
 $this->load->view('/templates/sidebar');
 ?>
     
 
     
-    <div class="container">
         <!--toggle-->
            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Sidebar</a>
-           
+   <div class="container">          
   <div class="page-header">
     <h1 id="timeline">Timeline</h1>
   </div>
@@ -86,6 +85,7 @@ $this->load->view('/templates/sidebar');
     ?>
     </ul>
 </div>
+   </div>
     
      <!--jQuery--> 
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js"); ?>"></script>

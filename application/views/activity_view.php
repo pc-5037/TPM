@@ -6,16 +6,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
+    <!--Bootstrap Core CSS--> 
+     <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>" />
+
+     <!--Custom CSS--> 
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/simple-sidebar.css"); ?>" />
+
 	<meta charset="utf-8">
 	<title>TPM</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
-<?php 
-$this->load->view('/templates/navact');
-?>
-<section id="content" class="column-right">
-    <?php
+    <?php $this->load->view('/templates/sidebar');
+
      for ($i = 0; $i < sizeof($activitystat); $i++) :
      $date[] = $activitystat[$i]['date'];
      $pad[] = "'".$date[$i]."'";
@@ -24,8 +27,14 @@ $this->load->view('/templates/navact');
 //    echo print_r($activitystat);
 //    echo print_r($guest);
     ?>
-        <script> $(function () { 
-    $('#container').highcharts({
+    
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12" id="container">
+                         
+                       <script> $(function () { 
+    $('#container-chart').highcharts({
         chart: {
             type: 'line'
         },
@@ -46,17 +55,19 @@ $this->load->view('/templates/navact');
         }]
     });
 });
-        </script>        		
-	<article>
-	<h1>Activity</h1><hr/><br/>	
+        </script> 
+<!--        <div class="page-header">
+    <h1>Activity</h1>
+    </div>-->
         <?php if (empty($activitystat)) { ?>
         <CENTER><h3 style="color:red;">The activity record is empty!</h3></CENTER><br>
         <?php } ?>
-                <div id="container" style="width:100%; height:400px;"></div>
-		</article>
-		<div class="clear"></div>
-		</section>
-<?php 
-$this->load->view('/templates/footer');
+                <div id="container-chart" style="width:80%; height:400px; float: right;"></div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
 

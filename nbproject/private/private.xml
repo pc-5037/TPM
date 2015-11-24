@@ -3,22 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Test.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/personal_edit_form.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Activity.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/history.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/templates/sidebar.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/profile_view.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/LoginModel.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/RegisterData.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/login.php</file>
             <file>file:/C:/xampp/htdocs/TPM/application/views/login_view.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/guest_view.php</file>
             <file>file:/C:/xampp/htdocs/TPM/application/views/guest_edit_form.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/welcome_message.php</file>
             <file>file:/C:/xampp/htdocs/TPM/application/views/activity_view.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/controllers/Profiles.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/models/HistoryModel.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/attraction_view.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/templates/sidebar.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/guest_form.php</file>
             <file>file:/C:/xampp/htdocs/TPM/application/views/history_view.php</file>
-            <file>file:/C:/xampp/htdocs/TPM/application/views/test_view.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/attraction_form.php</file>
+            <file>file:/C:/xampp/htdocs/TPM/application/views/attraction_edit_form.php</file>
         </group>
     </open-files>
 </project-private>

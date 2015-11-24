@@ -3,26 +3,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>" />
-    <script type="text/javascript" src="<?php echo base_url('assets/js/confirmation.js');?>" ></script>
+    <!--Bootstrap Core CSS--> 
+     <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>" />
+
+     <!--Custom CSS--> 
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/simple-sidebar.css"); ?>" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries--> 
+     <!--WARNING: Respond.js doesn't work if you view the page via file://--> 
+    <!--[if lt IE 9]>-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<![endif]-->
+    
+    <script type="text/javascript" src="<?php echo base_url('assets/js/validation.js');?>" ></script>
 	<meta charset="utf-8">
 	<title>TPM</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
-    
 <?php 
-$this->load->view('/templates/navvig');
+$this->load->view('/templates/sidebar');
 ?>
-    
-    <section id="content" class="column-right">               		
-	<article>
-							
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">			
         <h1>View all guests</h1>
-<!--        <p>Morbi fermentum condimentum felifdsffsfdsfsdfdfsdfsdfsfs, 
-            commodo vestibulum sem mattis sed. Aliquam magna ante, mollis vitae tincidunt</p>-->
-        <h3>Guest List</h3>
-        <table>
+        <h2>Guest List</h2>
+        
+        <table class="table table-hover">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>UID</th>
@@ -33,8 +47,11 @@ $this->load->view('/templates/navvig');
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-        <?php foreach ($guest_list as $guest):?>
-            <tr>
+            </thead>
+            
+            <tbody>
+            <tr>    
+                <?php foreach ($guest_list as $guest):?>
                 <td>
                <?php echo $guest->gid;?>
                 </td>
@@ -54,26 +71,28 @@ $this->load->view('/templates/navvig');
                <?php echo $guest->status ? 'true' : 'false'; ?>
                 </td>
                 <td>
-               <a class="button" href="<?php echo base_url() . "index.php/guests/show_detail_form/" . $guest->gid; ?>">
+               <a class="btn btn-success" href="<?php echo base_url() . "index.php/guests/show_detail_form/" . $guest->gid; ?>">
                 Edit</a>
 <!--                    anchor to edit ctrl-->
                 </td>
                 <td>
-                <a onclick="return confirmDelete()" class="button button-reversed" href="<?php echo base_url() . "index.php/guests/delete/" . $guest->gid; ?>">
+                <a onclick="return confirmDelete()" class="btn btn-danger" href="<?php echo base_url() . "index.php/guests/delete/" . $guest->gid; ?>">
                 Delete</a>
 <!--                    anchor to delete ctrl -->
                 </td>
-                </tr>
+                </tr>          
+            </tbody>
         <?php endforeach; ?>
         </table>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
 
+     <!--jQuery--> 
+    <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js"); ?>"></script>
 
-		
-		</article>
-		</section>
-<?php 
-$this->load->view('/templates/footer');
-?>
-		<div class="clear"></div>
+     <!--Bootstrap Core JavaScript--> 
+    <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
 </body>
-</html>
